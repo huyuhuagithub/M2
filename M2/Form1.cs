@@ -33,6 +33,7 @@ namespace M2
             try
             {
                 sp.PortName = comboBox1.Text;
+
                 TaskFactory tf = new TaskFactory(); ;
                 tf.StartNew(() =>
                 {
@@ -411,7 +412,7 @@ namespace M2
                 sp.WriteLine(command);
                 this.textBox1.Invoke(new Action(() => {this.textBox1.Text = command; }));
             }
-            catch (System.InvalidOperationException e)
+            catch (InvalidOperationException e)
             {
 
                 toolStripStatusLabel1.Text = e.Message;
