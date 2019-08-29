@@ -22,6 +22,7 @@ namespace M2
         {
             //PortName = "COM9",
             BaudRate = 115200,
+
             Parity = Parity.None,
             DataBits = 8,
             StopBits = StopBits.One,
