@@ -167,6 +167,7 @@ namespace M2
         public void EX_BT()
         {
             
+
                 command("EX_BT 1 1");
                 DelayMis(1000);
                 command("EX_BT 1 0");
