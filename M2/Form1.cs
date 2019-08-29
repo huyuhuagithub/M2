@@ -32,8 +32,7 @@ namespace M2
         {
             try
             {
-
-
+                        
                 sp.PortName = comboBox1.Text;
 
                 TaskFactory tf = new TaskFactory(); ;
