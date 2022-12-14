@@ -32,23 +32,15 @@ namespace M2
         {
             try
             {
-                        
                 sp.PortName = comboBox1.Text;
-
                 TaskFactory tf = new TaskFactory(); ;
-                tf.StartNew(() =>
-                {
-                    sp.Open();
-                    action();
-                }
-                );
+                tf.StartNew(() => { sp.Open(); action(); });
             }
             catch (Exception e)
             {
-
                 toolStripStatusLabel1.Text = e.Message;
             }
-            
+
         }
 
         #region 命令
@@ -84,323 +76,323 @@ namespace M2
 
         public void VoltageCheck()
         {
-                command("Voltage_Check 1 1");
-                DelayMis(1000);
-                command("Voltage_Check 1 0");
-                DelayMis(1000);
-                command("Voltage_Check 2 1");
-                DelayMis(1000);
-                command("Voltage_Check 2 0");
-                DelayMis(1000);
-                command("Voltage_Check 3 1");
-                DelayMis(1000);
-                command("Voltage_Check 3 0");
-                DelayMis(1000);
-                command("Voltage_Check 4 1");
-                DelayMis(1000);
-                command("Voltage_Check 4 0");
-                DelayMis(1000);
-                command("Voltage_Check 5 1");
-                DelayMis(1000);
-                command("Voltage_Check 5 0");
-                DelayMis(1000);
-                command("Voltage_Check 6 1");
-                DelayMis(1000);
-                command("Voltage_Check 6 0");
-                DelayMis(1000);
-                command("Voltage_Check 7 1");
-                DelayMis(1000);
-                command("Voltage_Check 7 0");
-                DelayMis(1000);
-                command("Voltage_Check 8 1");
-                DelayMis(1000);
-                command("Voltage_Check 8 0");
-                sp.Close();
-           
+            command("Voltage_Check 1 1");
+            DelayMis(1000);
+            command("Voltage_Check 1 0");
+            DelayMis(1000);
+            command("Voltage_Check 2 1");
+            DelayMis(1000);
+            command("Voltage_Check 2 0");
+            DelayMis(1000);
+            command("Voltage_Check 3 1");
+            DelayMis(1000);
+            command("Voltage_Check 3 0");
+            DelayMis(1000);
+            command("Voltage_Check 4 1");
+            DelayMis(1000);
+            command("Voltage_Check 4 0");
+            DelayMis(1000);
+            command("Voltage_Check 5 1");
+            DelayMis(1000);
+            command("Voltage_Check 5 0");
+            DelayMis(1000);
+            command("Voltage_Check 6 1");
+            DelayMis(1000);
+            command("Voltage_Check 6 0");
+            DelayMis(1000);
+            command("Voltage_Check 7 1");
+            DelayMis(1000);
+            command("Voltage_Check 7 0");
+            DelayMis(1000);
+            command("Voltage_Check 8 1");
+            DelayMis(1000);
+            command("Voltage_Check 8 0");
+            sp.Close();
+
 
         }
 
         public void CurrentCheck()
         {
-           
-                command("Current_Check 1 1");
-                DelayMis(1000);
-                command("Current_Check 1 0");
-                DelayMis(1000);
-                command("Current_Check 2 1");
-                DelayMis(1000);
-                command("Current_Check 2 0");
-                sp.Close();
-           
+
+            command("Current_Check 1 1");
+            DelayMis(1000);
+            command("Current_Check 1 0");
+            DelayMis(1000);
+            command("Current_Check 2 1");
+            DelayMis(1000);
+            command("Current_Check 2 0");
+            sp.Close();
+
 
         }
 
         public void Load_RES()
         {
-            
-                command("Load 1 1");
-                DelayMis(1000);
-                command("Load 1 0");
-                DelayMis(1000);
-                command("Load 2 1");
-                DelayMis(1000);
-                command("Load 2 0");
-                DelayMis(1000);
-                command("Load 3 1");
-                DelayMis(1000);
-                command("Load 3 0");
-                DelayMis(1000);
-                command("Load 4 1");
-                DelayMis(1000);
-                command("Load 4 0");
-                DelayMis(1000);
-                command("Load 5 1");
-                DelayMis(1000);
-                command("Load 5 0");
-                DelayMis(1000);
-                command("Load 6 1");
-                DelayMis(1000);
-                command("Load 6 0");
-                sp.Close();
-            
+
+            command("Load 1 1");
+            DelayMis(1000);
+            command("Load 1 0");
+            DelayMis(1000);
+            command("Load 2 1");
+            DelayMis(1000);
+            command("Load 2 0");
+            DelayMis(1000);
+            command("Load 3 1");
+            DelayMis(1000);
+            command("Load 3 0");
+            DelayMis(1000);
+            command("Load 4 1");
+            DelayMis(1000);
+            command("Load 4 0");
+            DelayMis(1000);
+            command("Load 5 1");
+            DelayMis(1000);
+            command("Load 5 0");
+            DelayMis(1000);
+            command("Load 6 1");
+            DelayMis(1000);
+            command("Load 6 0");
+            sp.Close();
+
 
         }
 
         public void EX_BT()
         {
-            
 
-                command("EX_BT 1 1");
-                DelayMis(1000);
-                command("EX_BT 1 0");
-                DelayMis(1000);
-                command("EX_BT 2 1");
-                DelayMis(1000);
-                command("EX_BT 2 0");
-                sp.Close();
-           
+
+            command("EX_BT 1 1");
+            DelayMis(1000);
+            command("EX_BT 1 0");
+            DelayMis(1000);
+            command("EX_BT 2 1");
+            DelayMis(1000);
+            command("EX_BT 2 0");
+            sp.Close();
+
 
         }
 
         public void Warn_light()
         {
-            
-                command("Warn 1 1");
-                DelayMis(1000);
-                command("Warn 1 0");
-                DelayMis(1000);
-                command("Warn 2 1");
-                DelayMis(1000);
-                command("Warn 2 0");
-                DelayMis(1000);
-                command("Warn 3 1");
-                DelayMis(1000);
-                command("Warn 3 0");
-                DelayMis(1000);
-                command("Warn 4 1");
-                DelayMis(1000);
-                command("Warn 4 0");
-                DelayMis(1000);
-                command("Warn 5 1");
-                DelayMis(1000);
-                command("Warn 5 0");
-                sp.Close();
-           
+
+            command("Warn 1 1");
+            DelayMis(1000);
+            command("Warn 1 0");
+            DelayMis(1000);
+            command("Warn 2 1");
+            DelayMis(1000);
+            command("Warn 2 0");
+            DelayMis(1000);
+            command("Warn 3 1");
+            DelayMis(1000);
+            command("Warn 3 0");
+            DelayMis(1000);
+            command("Warn 4 1");
+            DelayMis(1000);
+            command("Warn 4 0");
+            DelayMis(1000);
+            command("Warn 5 1");
+            DelayMis(1000);
+            command("Warn 5 0");
+            sp.Close();
+
         }
 
         public void Output_H_Level()
         {
-            
-                command("H_Level 1 1");
-                DelayMis(1000);
-                command("H_Level 1 0");
-                DelayMis(1000);
-                command("H_Level 2 1");
-                DelayMis(1000);
-                command("H_Level 2 0");
-                DelayMis(1000);
-                command("H_Level 3 1");
-                DelayMis(1000);
-                command("H_Level 3 0");
-                DelayMis(1000);
-                command("H_Level 4 1");
-                DelayMis(1000);
-                command("H_Level 4 0");
-                DelayMis(1000);
-                command("H_Level 5 1");
-                DelayMis(1000);
-                command("H_Level 5 0");
-                DelayMis(1000);
-                command("H_Level 6 1");
-                DelayMis(1000);
-                command("H_Level 6 0");
-                DelayMis(1000);
-                command("H_Level 7 1");
-                DelayMis(1000);
-                command("H_Level 7 0");
-                DelayMis(1000);
-                command("H_Level 8 1");
-                DelayMis(1000);
-                command("H_Level 8 0");
-                sp.Close();
-           
+
+            command("H_Level 1 1");
+            DelayMis(1000);
+            command("H_Level 1 0");
+            DelayMis(1000);
+            command("H_Level 2 1");
+            DelayMis(1000);
+            command("H_Level 2 0");
+            DelayMis(1000);
+            command("H_Level 3 1");
+            DelayMis(1000);
+            command("H_Level 3 0");
+            DelayMis(1000);
+            command("H_Level 4 1");
+            DelayMis(1000);
+            command("H_Level 4 0");
+            DelayMis(1000);
+            command("H_Level 5 1");
+            DelayMis(1000);
+            command("H_Level 5 0");
+            DelayMis(1000);
+            command("H_Level 6 1");
+            DelayMis(1000);
+            command("H_Level 6 0");
+            DelayMis(1000);
+            command("H_Level 7 1");
+            DelayMis(1000);
+            command("H_Level 7 0");
+            DelayMis(1000);
+            command("H_Level 8 1");
+            DelayMis(1000);
+            command("H_Level 8 0");
+            sp.Close();
+
         }
 
         public void Output_L_Level()
         {
-           
-                command("L_Level 1 1");
-                DelayMis(1000);
-                command("L_Level 1 0");
-                DelayMis(1000);
-                command("L_Level 2 1");
-                DelayMis(1000);
-                command("L_Level 2 0");
-                DelayMis(1000);
-                command("L_Level 3 1");
-                DelayMis(1000);
-                command("L_Level 3 0");
-                DelayMis(1000);
-                command("L_Level 4 1");
-                DelayMis(1000);
-                command("L_Level 4 0");
-                DelayMis(1000);
-                command("L_Level 5 1");
-                DelayMis(1000);
-                command("L_Level 5 0");
-                DelayMis(1000);
-                command("L_Level 6 1");
-                DelayMis(1000);
-                command("L_Level 6 0");
-                DelayMis(1000);
-                command("L_Level 7 1");
-                DelayMis(1000);
-                command("L_Level 7 0");
-                DelayMis(1000);
-                command("L_Level 8 1");
-                DelayMis(1000);
-                command("L_Level 8 0");
-                sp.Close();
-           
+
+            command("L_Level 1 1");
+            DelayMis(1000);
+            command("L_Level 1 0");
+            DelayMis(1000);
+            command("L_Level 2 1");
+            DelayMis(1000);
+            command("L_Level 2 0");
+            DelayMis(1000);
+            command("L_Level 3 1");
+            DelayMis(1000);
+            command("L_Level 3 0");
+            DelayMis(1000);
+            command("L_Level 4 1");
+            DelayMis(1000);
+            command("L_Level 4 0");
+            DelayMis(1000);
+            command("L_Level 5 1");
+            DelayMis(1000);
+            command("L_Level 5 0");
+            DelayMis(1000);
+            command("L_Level 6 1");
+            DelayMis(1000);
+            command("L_Level 6 0");
+            DelayMis(1000);
+            command("L_Level 7 1");
+            DelayMis(1000);
+            command("L_Level 7 0");
+            DelayMis(1000);
+            command("L_Level 8 1");
+            DelayMis(1000);
+            command("L_Level 8 0");
+            sp.Close();
+
         }
 
         public void Audio2IN()
         {
-                command("Audio2_IN 1 1");
-                DelayMis(1000);
-                command("Audio2_IN 1 0");
-                DelayMis(1000);
-                command("Audio2_IN 2 1");
-                DelayMis(1000);
-                command("Audio2_IN 2 0");
-                DelayMis(1000);
-                command("Audio2_IN 3 1");
-                DelayMis(1000);
-                command("Audio2_IN 3 0");
-                DelayMis(1000);
-                command("Audio2_IN 4 1");
-                DelayMis(1000);
-                command("Audio2_IN 4 0");
-                DelayMis(1000);
-                command("Audio2_IN 5 1");
-                DelayMis(1000);
-                command("Audio2_IN 5 0");
-                DelayMis(1000);
-                command("Audio2_IN 6 1");
-                DelayMis(1000);
-                command("Audio2_IN 6 0");
-                DelayMis(1000);
-                command("Audio2_IN 7 1");
-                DelayMis(1000);
-                command("Audio2_IN 7 0");
-                DelayMis(1000);
-                command("Audio2_IN 8 1");
-                DelayMis(1000);
-                command("Audio2_IN 8 0");
-                sp.Close();
-            
+            command("Audio2_IN 1 1");
+            DelayMis(1000);
+            command("Audio2_IN 1 0");
+            DelayMis(1000);
+            command("Audio2_IN 2 1");
+            DelayMis(1000);
+            command("Audio2_IN 2 0");
+            DelayMis(1000);
+            command("Audio2_IN 3 1");
+            DelayMis(1000);
+            command("Audio2_IN 3 0");
+            DelayMis(1000);
+            command("Audio2_IN 4 1");
+            DelayMis(1000);
+            command("Audio2_IN 4 0");
+            DelayMis(1000);
+            command("Audio2_IN 5 1");
+            DelayMis(1000);
+            command("Audio2_IN 5 0");
+            DelayMis(1000);
+            command("Audio2_IN 6 1");
+            DelayMis(1000);
+            command("Audio2_IN 6 0");
+            DelayMis(1000);
+            command("Audio2_IN 7 1");
+            DelayMis(1000);
+            command("Audio2_IN 7 0");
+            DelayMis(1000);
+            command("Audio2_IN 8 1");
+            DelayMis(1000);
+            command("Audio2_IN 8 0");
+            sp.Close();
+
         }
 
         public void Audio2_OUT()
         {
-            
-                command("Audio2_OUT 1 1");
-                DelayMis(1000);
-                command("Audio2_OUT 1 0");
-                DelayMis(1000);
-                command("Audio2_OUT 2 1");
-                DelayMis(1000);
-                command("Audio2_OUT 2 0");
-                DelayMis(1000);
-                command("Audio2_OUT 3 1");
-                DelayMis(1000);
-                command("Audio2_OUT 3 0");
-                DelayMis(1000);
-                command("Audio2_OUT 4 1");
-                DelayMis(1000);
-                command("Audio2_OUT 4 0");
-                DelayMis(1000);
-                command("Audio2_OUT 5 1");
-                DelayMis(1000);
-                command("Audio2_OUT 5 0");
-                DelayMis(1000);
-                command("Audio2_OUT 6 1");
-                DelayMis(1000);
-                command("Audio2_OUT 6 0");
-                DelayMis(1000);
-                command("Audio2_OUT 7 1");
-                DelayMis(1000);
-                command("Audio2_OUT 7 0");
-                DelayMis(1000);
-                command("Audio2_OUT 8 1");
-                DelayMis(1000);
-                command("Audio2_OUT 8 0");
-                sp.Close();
-           
+
+            command("Audio2_OUT 1 1");
+            DelayMis(1000);
+            command("Audio2_OUT 1 0");
+            DelayMis(1000);
+            command("Audio2_OUT 2 1");
+            DelayMis(1000);
+            command("Audio2_OUT 2 0");
+            DelayMis(1000);
+            command("Audio2_OUT 3 1");
+            DelayMis(1000);
+            command("Audio2_OUT 3 0");
+            DelayMis(1000);
+            command("Audio2_OUT 4 1");
+            DelayMis(1000);
+            command("Audio2_OUT 4 0");
+            DelayMis(1000);
+            command("Audio2_OUT 5 1");
+            DelayMis(1000);
+            command("Audio2_OUT 5 0");
+            DelayMis(1000);
+            command("Audio2_OUT 6 1");
+            DelayMis(1000);
+            command("Audio2_OUT 6 0");
+            DelayMis(1000);
+            command("Audio2_OUT 7 1");
+            DelayMis(1000);
+            command("Audio2_OUT 7 0");
+            DelayMis(1000);
+            command("Audio2_OUT 8 1");
+            DelayMis(1000);
+            command("Audio2_OUT 8 0");
+            sp.Close();
+
         }
 
         public void Audio4_OUT()
         {
-           
-                command("Audio4_OUT 1 1");
-                DelayMis(1000);
-                command("Audio4_OUT 1 0");
-                DelayMis(1000);
-                command("Audio4_OUT 2 1");
-                DelayMis(1000);
-                command("Audio4_OUT 2 0");
-                DelayMis(1000);
-                command("Audio4_OUT 3 1");
-                DelayMis(1000);
-                command("Audio4_OUT 3 0");
-                DelayMis(1000);
-                command("Audio4_OUT 4 1");
-                DelayMis(1000);
-                command("Audio4_OUT 4 0");
-                sp.Close();
-           
+
+            command("Audio4_OUT 1 1");
+            DelayMis(1000);
+            command("Audio4_OUT 1 0");
+            DelayMis(1000);
+            command("Audio4_OUT 2 1");
+            DelayMis(1000);
+            command("Audio4_OUT 2 0");
+            DelayMis(1000);
+            command("Audio4_OUT 3 1");
+            DelayMis(1000);
+            command("Audio4_OUT 3 0");
+            DelayMis(1000);
+            command("Audio4_OUT 4 1");
+            DelayMis(1000);
+            command("Audio4_OUT 4 0");
+            sp.Close();
+
         }
 
         public void Z_OUT1()
         {
-           
-                command("Z_OUT 1 1");
-                DelayMis(1000);
-                command("Z_OUT 1 0");
-                DelayMis(1000);
-                command("Z_OUT 2 1");
-                DelayMis(1000);
-                command("Z_OUT 2 0");
-                DelayMis(1000);
-                command("Z_OUT 3 1");
-                DelayMis(1000);
-                command("Z_OUT 3 0");
-                DelayMis(1000);
-                command("Z_OUT 4 1");
-                DelayMis(1000);
-                command("Z_OUT 4 0");
-                sp.Close();
-           
+
+            command("Z_OUT 1 1");
+            DelayMis(1000);
+            command("Z_OUT 1 0");
+            DelayMis(1000);
+            command("Z_OUT 2 1");
+            DelayMis(1000);
+            command("Z_OUT 2 0");
+            DelayMis(1000);
+            command("Z_OUT 3 1");
+            DelayMis(1000);
+            command("Z_OUT 3 0");
+            DelayMis(1000);
+            command("Z_OUT 4 1");
+            DelayMis(1000);
+            command("Z_OUT 4 0");
+            sp.Close();
+
 
         }
         #endregion
@@ -411,7 +403,7 @@ namespace M2
             try
             {
                 sp.WriteLine(command);
-                this.textBox1.Invoke(new Action(() => {this.textBox1.Text = command; }));
+                this.textBox1.Invoke(new Action(() => { this.textBox1.Text = command; }));
             }
             catch (InvalidOperationException e)
             {
